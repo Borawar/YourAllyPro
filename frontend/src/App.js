@@ -1,44 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Clock, Users, AlertTriangle, Zap, Shield, Code, TrendingUp, Layout, Globe, ShoppingCart, RefreshCw, MessageCircle } from 'lucide-react';
 import './App.css';
 
-const API_URL = process.env.REACT_APP_BACKEND_URL;
-
 function App() {
-  const [formData, setFormData] = useState({ name: '', email: '', company: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      const response = await fetch(`${API_URL}/api/contact`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-      if (response.ok) {
-        setSubmitted(true);
-        setFormData({ name: '', email: '', company: '', message: '' });
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    }
-    setLoading(false);
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   return (
     <div className="app">
       {/* Navigation */}
       <nav className="nav">
         <div className="container nav-content">
           <div className="logo" data-testid="logo">YourAllyPro</div>
-          <a href="#contact" className="nav-cta" data-testid="nav-cta">Become a Partner</a>
+          <a href="https://wa.me/919799951611" target="_blank" rel="noopener noreferrer" className="nav-cta" data-testid="nav-cta">Become a Partner</a>
         </div>
       </nav>
 
@@ -47,7 +18,7 @@ function App() {
         <div className="container hero-content">
           <h1>Your White-Label Website Development Partner</h1>
           <p>Help your agency deliver websites to clients in just 3–5 days.</p>
-          <a href="#contact" className="btn-primary" data-testid="hero-cta">Become a Partner</a>
+          <a href="https://wa.me/919799951611" target="_blank" rel="noopener noreferrer" className="btn-primary" data-testid="hero-cta">Become a Partner</a>
         </div>
       </section>
 
@@ -241,92 +212,7 @@ function App() {
         <div className="container">
           <h2 className="section-title">Ready to Deliver Websites Faster?</h2>
           <p>Join agencies that have transformed their website delivery with YourAllyPro.</p>
-          <a href="#contact" className="btn-white" data-testid="final-cta-btn">Partner With YourAllyPro</a>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="section contact-section" id="contact" data-testid="contact-section">
-        <div className="container">
-          <h2 className="section-title">Get Started Today</h2>
-          <p className="section-subtitle">Fill out the form or book a call to discuss your partnership</p>
-          <div className="contact-grid">
-            <div className="contact-form" data-testid="contact-form">
-              <h3 style={{ marginBottom: '24px', fontSize: '1.5rem' }}>Send Us a Message</h3>
-              {submitted && (
-                <div className="success-message" data-testid="success-message">
-                  Thank you! We'll get back to you within 24 hours.
-                </div>
-              )}
-              <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                  <label htmlFor="name">Your Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    data-testid="input-name"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    data-testid="input-email"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="company">Agency Name</label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    required
-                    data-testid="input-company"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="message">Tell us about your agency</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    data-testid="input-message"
-                  />
-                </div>
-                <button type="submit" className="btn-primary submit-btn" disabled={loading} data-testid="submit-btn">
-                  {loading ? 'Sending...' : 'Send Message'}
-                </button>
-              </form>
-            </div>
-            <div className="calendly-embed" data-testid="calendly-section">
-              <h3>Book a Discovery Call</h3>
-              <div className="calendly-placeholder">
-                <p>Schedule a 15-minute call to discuss how we can help your agency</p>
-                <a 
-                  href="https://calendly.com/yourallypro" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn-primary"
-                  data-testid="calendly-btn"
-                >
-                  Schedule Call
-                </a>
-              </div>
-            </div>
-          </div>
+          <a href="https://wa.me/919799951611" target="_blank" rel="noopener noreferrer" className="btn-white" data-testid="final-cta-btn">Partner With YourAllyPro</a>
         </div>
       </section>
 
@@ -339,7 +225,7 @@ function App() {
 
       {/* WhatsApp Button */}
       <a 
-        href="https://wa.me/1234567890" 
+        href="https://wa.me/919799951611" 
         target="_blank" 
         rel="noopener noreferrer" 
         className="whatsapp-btn"

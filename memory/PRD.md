@@ -35,10 +35,14 @@ YourAllyPro is a white-label website development partner for digital marketing a
 11. **Footer** - Copyright
 
 ### Features
-- **WhatsApp Floating Button** - Fixed bottom-right corner
+- **WhatsApp Floating Button** - Fixed bottom-right corner (links to +919799951611)
+- **All CTAs link to WhatsApp** - Hero, Nav, Final CTA all open WhatsApp chat
 - **Mobile Responsive** - Fully responsive layout
-- **Contact Form API** - Stores submissions in MongoDB
 - **Navigation** - Fixed header with CTA button
+
+### Removed (per user request)
+- Contact form section
+- Calendly/Schedule call section
 
 ### Tech Stack
 - **Frontend:** React.js, CSS
