@@ -64,6 +64,6 @@ async def submit_contact(form: ContactForm):
 @app.get("/api/contacts")
 async def get_contacts():
     contacts = []
-    async for contact in db.contacts.find({}, {"_id": 0}):
+    async for contact in db.contacts.find({}, {"_id": 0}).limit(100):
         contacts.append(contact)
     return contacts
