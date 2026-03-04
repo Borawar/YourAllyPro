@@ -186,9 +186,9 @@ function App() {
             <div className="testimonial-card" data-testid="testimonial-2">
               <p className="testimonial-text">"We added website development to our services without hiring a single developer. The profit margins are incredible and the quality is top-notch."</p>
               <div className="testimonial-author">
-                <div className="author-avatar">SR</div>
+                <div className="author-avatar">RK</div>
                 <div className="author-info">
-                  <h4>Sarah Rodriguez</h4>
+                  <h4>Rahul Kapoor</h4>
                   <p>CEO, BrandBoost Marketing</p>
                 </div>
               </div>
